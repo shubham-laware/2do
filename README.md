@@ -7,7 +7,7 @@
     <li>Mark as completed</li>
     <li>Delete ToDo</li>
   </ul>
-  <p>Tech Stack:</p>
+  <h3>Tech Stack:</h3>
   <ul>
     <li>HTML</li>
     <li>CSS</li>
