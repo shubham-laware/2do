@@ -2,17 +2,32 @@ let date = document.getElementById('date');
 let todayDate = new Date().toLocaleDateString();
 let container = document.getElementById('container')
 
+localStorage.setItem('dates',todayDate);
+
 
 date.append(todayDate);
+
+let storedDate=localStorage.getItem('dates')
+
+if(storedDate!==todayDate){
+    localStorage.removeItem('tasks');
+    localStorage.removeItem('dates')
+}
+
 
 window.addEventListener('load', displayTasks);
 
 
 function displayTasks() {
-    let toDoList = document.querySelector('.todo-list');
+
+    if(localStorage.getItem('tasks'))
+    {
+       
+
+        let toDoList = document.querySelector('.todo-list');
     toDoList.innerHTML = ''; 
 
-    let tasks = JSON.parse(sessionStorage.getItem('tasks'));
+    let tasks = JSON.parse(localStorage.getItem('tasks'));
 
     tasks.forEach((task) => {
 
@@ -33,6 +48,11 @@ function displayTasks() {
     });
 
     optionAction();
+
+    }else{
+        console.log('Welcome..')
+    }
+    
 }
 
 
@@ -51,6 +71,8 @@ addTaskButton.addEventListener('click', () => {
     let saveButton = userInput.querySelector('#save-button');
 
     saveButton.addEventListener('click', () => {
+
+        
         addTaskButton.disabled = true;
 
         let toDoName = userInput.querySelector('.todo-input').value;
@@ -60,7 +82,7 @@ addTaskButton.addEventListener('click', () => {
             alert('ToDo can\'t be empty');
         } else {
 
-            let tasks = JSON.parse(sessionStorage.getItem('tasks')) || [];
+            let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
             const task = {
                 name: toDoName,
@@ -71,7 +93,7 @@ addTaskButton.addEventListener('click', () => {
 
             tasks.push(task);
 
-            sessionStorage.setItem('tasks', JSON.stringify(tasks));
+            localStorage.setItem('tasks', JSON.stringify(tasks));
 
             addTaskButton.disabled = false;
             inputAppend.removeChild(userInput);
@@ -144,7 +166,7 @@ function optionAction() {
 
 
 function completeOption(options) {
-    let tasks = JSON.parse(sessionStorage.getItem('tasks'))
+    let tasks = JSON.parse(localStorage.getItem('tasks'))
 
     let optionsParent = options.parentElement; 
 
@@ -158,7 +180,7 @@ function completeOption(options) {
 
     titleToMark.style.textDecoration='line-through'
 
-    sessionStorage.setItem('tasks', JSON.stringify(tasks))
+    localStorage.setItem('tasks', JSON.stringify(tasks))
 
 }
 
@@ -179,7 +201,7 @@ function optionsDisable(title, options) {
 
                 event.stopPropagation()
 
-                const tasks = JSON.parse(sessionStorage.getItem('tasks'))
+                const tasks = JSON.parse(localStorage.getItem('tasks'))
 
                 let titleNoteList = title.parentElement;
 
@@ -270,7 +292,7 @@ function editTask(title, edit, options) {
 
 function saveChanges(toDoTitle, toDoNote, titleNoteList, userInput, titleToEdit, inputAppend) {
 
-    const tasks = JSON.parse(sessionStorage.getItem('tasks')) || []
+    const tasks = JSON.parse(localStorage.getItem('tasks')) || []
 
     let taskToUpdate = tasks.find(task => task.name === titleToEdit)
 
@@ -291,7 +313,7 @@ function saveChanges(toDoTitle, toDoNote, titleNoteList, userInput, titleToEdit,
             taskToUpdate.edited = true
 
 
-            sessionStorage.setItem('tasks', JSON.stringify(tasks))
+            localStorage.setItem('tasks', JSON.stringify(tasks))
             inputAppend.removeChild(userInput)
 
         }
@@ -304,7 +326,7 @@ function delteTask(options) {
     let optionsParent = options.parentElement;
     optionsParent.remove();
 
-    const tasks = JSON.parse(sessionStorage.getItem('tasks'))
+    const tasks = JSON.parse(localStorage.getItem('tasks'))
 
     let titleToDelete = optionsParent.querySelector('.title').textContent
 
@@ -315,7 +337,7 @@ function delteTask(options) {
     if (taskIndexToDelete !== -1) {
         tasks.splice(taskIndexToDelete, 1);
 
-        sessionStorage.setItem('tasks', JSON.stringify(tasks))
+        localStorage.setItem('tasks', JSON.stringify(tasks))
     }
 }
 
