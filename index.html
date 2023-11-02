@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div class="box2">
+
+            <div class="date" id="date">
+
+            </div>
+
+            <ol class="todo-box todo-list">
+
+            </ol>
+
+            <div class="button-box">
+
+                <button type="button" id="add-task-button">Add Task</button>
+
+            </div>
+
+            <div class="black-box">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+    </div>
+
+    <template id="user-inputT">
+
+        <form action="" class="form box4">
+
+            <div class="input-flex">
+
+                <div>
+                    ToDo:
+                </div>
+
+                <div>
+                    <input type="text" class="todo-input">
+                </div>
+
+            </div>
+
+            <div class="input-flex">
+
+                <div>
+                    Note:
+                </div>
+
+                <div>
+                    <textarea cols="39" rows="4" class="textarea-fixed todo-note"></textarea>
+                </div>
+
+            </div>
+
+            <div class="input-flex input-buttons">
+
+                <button type="button" id="save-button">Save</button>
+
+                <button type="button" id="cancel-button">Cancel</button>
+
+            </div>
+        </form>
+
+    </template>
+
+
+
+    <template id="listT">
+        <li class="title-note-list">
+
+
+            <div class="title">
+                <!-- title 3 -->
+            </div>
+
+
+            <div class="note">
+                <!-- note of todo -->
+            </div>
+
+            <div class="options">
+                <button class="edit option-button-display">
+                    <svg width="20px" height="20px" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg"
+                        aria-labelledby="editIconTitle" stroke="#ffffff" stroke-width="1" stroke-linecap="square"
+                        stroke-linejoin="miter" fill="none" color="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <title id="editIconTitle">Edit</title>
+                            <path
+                                d="M18.4142136 4.41421356L19.5857864 5.58578644C20.366835 6.36683502 20.366835 7.63316498 19.5857864 8.41421356L8 20 4 20 4 16 15.5857864 4.41421356C16.366835 3.63316498 17.633165 3.63316498 18.4142136 4.41421356zM14 6L18 10">
+                            </path>
+                        </g>
+                    </svg>
+                </button>
+
+                <button class="completed option-button-display">
+                    <svg fill="#f7f7f7" height="20px" width="20px" version="1.1" id="Layer_1"
+                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="-76.86 -76.86 666.14 666.14" xml:space="preserve" stroke="#f7f7f7"
+                        stroke-width="7.686299999999998">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <g>
+                                <g>
+                                    <path
+                                        d="M509.313,67.45c-4.16-4.16-10.88-4.267-15.04-0.107L134.06,422.33l-115.2-121.6c-3.733-4.48-10.453-5.12-15.04-1.387 c-4.48,3.733-5.12,10.453-1.387,15.04c0.32,0.32,0.533,0.64,0.853,0.96l122.667,129.493c1.92,2.133,4.693,3.307,7.573,3.307h0.213 c2.773,0,5.44-1.067,7.467-3.093l368-362.667C513.473,78.33,513.473,71.61,509.313,67.45z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                    </svg>
+                </button>
+                <button class="delete option-button-display">
+                    <svg width="20px" height="20px" viewBox="-266.24 -266.24 1556.48 1556.48"
+                        xmlns="http://www.w3.org/2000/svg" fill="#ffffff" stroke="#ffffff" stroke-width="0.01024">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <path fill="#ffffff"
+                                d="M160 256H96a32 32 0 0 1 0-64h256V95.936a32 32 0 0 1 32-32h256a32 32 0 0 1 32 32V192h256a32 32 0 1 1 0 64h-64v672a32 32 0 0 1-32 32H192a32 32 0 0 1-32-32V256zm448-64v-64H416v64h192zM224 896h576V256H224v640zm192-128a32 32 0 0 1-32-32V416a32 32 0 0 1 64 0v320a32 32 0 0 1-32 32zm192 0a32 32 0 0 1-32-32V416a32 32 0 0 1 64 0v320a32 32 0 0 1-32 32z">
+                            </path>
+                        </g>
+                    </svg>
+                </button>
+
+
+            </div>
+
+        </li>
+    </template>
+
+
+    <script src="index.js"></script>
+
+
+</body>
+
+</html>

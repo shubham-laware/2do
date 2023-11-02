@@ -1,0 +1,276 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#container {
+    background-color: #0083ff;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: flex-start;
+    box-sizing: border-box;
+    justify-content: center;
+    position: relative;
+}
+
+.box2 {
+    width: 35vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 4%;
+
+}
+
+.date {
+    border-radius: 10px;
+    background-color: #161616;
+    color: white;
+    font-size: 1.3rem;
+    height: 2rem;
+    max-width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px; 
+    margin-bottom: 1%;
+    position: absolute;
+    
+}
+
+.todo-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0px 5px 0px 7px;
+    width: 53vw;
+    height: 74vh;
+    position: absolute;
+    top: 10%;     
+    overflow-y: scroll; 
+    overflow-x: hidden;
+
+}
+
+.todo-box::-webkit-scrollbar {
+    width: 0px;
+    height: 10px;
+  }
+  
+  .todo-box::-webkit-scrollbar-thumb {
+    background: #080303;
+    border-radius: 6px;
+  }
+
+
+.title-note-list {
+    display: flex;
+    gap: 0.5rem;
+    position: relative;
+    z-index: 5;
+    height: 2.5rem;
+    align-items: center;
+    width: 63%; 
+}
+
+.button-box{
+    
+    width: 99%;
+    height: 2rem;
+    display: flex;
+    position: absolute;
+    bottom: 1%;  
+}
+
+.button-box #add-task-button{
+    width: 98%;
+    background-color: #161616;
+    color: white;
+    text-align: center;
+    z-index: 1;
+    border-radius: 0px 0px 10px 10px;   
+}
+
+#add-task-button:hover{
+    transform: translateY(-0.5px);
+    border: none;
+}
+
+.black-box{
+    background-color: #161616 ;
+    border-radius: 10px;
+    height: 91%;
+    width: 97.2%;
+    position: absolute;
+    left:1.5%;
+    top: 8%;
+}
+
+
+
+.title {  
+    background-color: #161616;
+    border: 1.7px solid black;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    padding: 4px 7px 4px 7px;
+    display: flex;
+    align-items: center;
+    margin-left: 0.5px;
+    font-size: 1.2rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    z-index: 55;
+    box-shadow: 0px 2px 2px  black;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.title::-webkit-scrollbar {
+    width: 0px;
+    height: 0.05px;
+  }
+  
+
+  .title:-webkit-scrollbar-thumb {
+    background: #080303;
+    border-radius: 6px;
+  }
+.title:hover {
+    transform: translateY(-0.7px);
+    cursor: pointer;
+    background-color: #151414;
+}
+
+.note {
+    border: 1.7px solid black;
+    background-color: #161616;
+    border-radius: 10px;
+    color: white;
+    width: 50%;
+    min-height: 1.5rem;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    text-align: justify;
+    left: 95%;
+    transform: translateX(0);
+    transition: transform 0.2s linear, visibility 0s linear, opacity 0.5s linear;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    top: 10%;
+    
+}
+
+.title:hover ~ .note{
+    visibility: visible;
+    background-color: #161616;
+    opacity: 1;
+    transform: translateX(24%);
+    box-shadow: 0px 3px 2px  black;
+}
+
+.box4 {
+    height: 220px;
+    width: 420px;
+    position: absolute;
+    bottom: -2%;              
+    left: 4.5%;
+    background-color: #161616;
+    color: white;
+    z-index: 55;
+    box-shadow: 0px 0px 5px 2px  black;
+
+
+}
+
+.form {
+    border: 1px solid black;
+    height: 25vh;
+    width: 28vw;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+}
+
+.input-flex {
+    display: flex;
+    gap: 0.5rem;
+    padding: 2px;
+
+}
+
+.input-flex #save-button{
+    background-color: #161616;
+    width: 50px;
+    color: white;
+}
+
+.input-flex #cancel-button{
+    background-color: #161616;
+    width: 50px;
+    color: white;
+}
+
+.todo-input {
+    width: 300px;
+    height: 1.5rem;
+
+}
+
+.textarea-fixed {
+    resize: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.todo-button {
+    width: 60px;
+}
+
+.options{
+    width: 22%;
+    height: 2rem;
+    display: flex;
+    gap: 0.2rem;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position: absolute;
+    left: 79%;
+    z-index: 50;
+    
+}
+
+
+
+.option-button-display{
+    background-color: #161616;
+    height: 75%;
+    width: 25%;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+
+
+
+
+
