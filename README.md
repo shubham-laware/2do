@@ -1,4 +1,4 @@
-<h1><strong>ToDo</strong> app created for managing your daily workload efficiently.</h1>
+<h1>ToDo created for managing  daily workload efficiently.</h1>
 <div>
   <h3>Features:</h3>
   <ul>
