@@ -1,12 +1,12 @@
-<h1>2Do created for managing  daily workload efficiently.</h1>
+<h1>2do created for managing  daily workload efficiently.</h1>
 <div>
   <h3>Features:</h3>
   <ul>
-    <li>Add new 2Do</li>
-    <li>Edit 2Do</li>
+    <li>Add new 2do</li>
+    <li>Edit 2do</li>
     <li>Mark as completed</li>
-    <li>Add note to each 2Do</li>
-    <li>Delete 2Do</li>
+    <li>Add note to each 2do</li>
+    <li>Delete 2do</li>
   </ul>
   <h3>Tech Stack:</h3>
   <ul>
