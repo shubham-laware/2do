@@ -5,6 +5,7 @@
     <li>Add ToDo</li>
     <li>Edit ToDo</li>
     <li>Mark as completed</li>
+    <li>Add note to each ToDo</li>
     <li>Delete ToDo</li>
   </ul>
   <h3>Tech Stack:</h3>
