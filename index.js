@@ -2,14 +2,14 @@ let date = document.getElementById('date');
 let todayDate = new Date().toLocaleDateString();
 let container = document.getElementById('container')
 
-localStorage.setItem('dates',todayDate);
+localStorage.setItem('dates', todayDate);
 
 
 date.append(todayDate);
 
-let storedDate=localStorage.getItem('dates')
+let storedDate = localStorage.getItem('dates')
 
-if(storedDate!==todayDate){
+if (storedDate !== todayDate) {
     localStorage.removeItem('tasks');
     localStorage.removeItem('dates')
 }
@@ -20,39 +20,35 @@ window.addEventListener('load', displayTasks);
 
 function displayTasks() {
 
-    if(localStorage.getItem('tasks'))
-    {
-       
+    if (localStorage.getItem('tasks')) {
+
 
         let toDoList = document.querySelector('.todo-list');
-    toDoList.innerHTML = ''; 
+        toDoList.innerHTML = '';
 
-    let tasks = JSON.parse(localStorage.getItem('tasks'));
+        let tasks = JSON.parse(localStorage.getItem('tasks'));
 
-    tasks.forEach((task) => {
+        tasks.forEach((task) => {
 
-        let list = document.getElementById('listT');
-        let titleList = list.content.cloneNode(true).children[0];
-        let titleDiv = titleList.querySelector('.title');
-        titleDiv.textContent = task.name;
-        titleDiv.setAttribute('id',task.id)
-        let noteDiv = titleList.querySelector('.note');
-        noteDiv.textContent = task.note;
-        toDoList.append(titleList);
+            let list = document.getElementById('listT');
+            let titleList = list.content.cloneNode(true).children[0];
+            let titleDiv = titleList.querySelector('.title');
+            titleDiv.textContent = task.name;
+            titleDiv.setAttribute('id', task.id)
+            let noteDiv = titleList.querySelector('.note');
+            noteDiv.textContent = task.note;
+            toDoList.append(titleList);
 
-        if(task.completed)
-        {
-            titleDiv.style.textDecoration='line-through'
-        }
+            if (task.completed) {
+                titleDiv.style.textDecoration = 'line-through'
+            }
 
-    });
+        });
 
-    optionAction();
+        optionAction();
 
-    }else{
-        console.log('Welcome..')
-    }
-    
+    } 
+
 }
 
 
@@ -72,7 +68,7 @@ addTaskButton.addEventListener('click', () => {
 
     saveButton.addEventListener('click', () => {
 
-        
+
         addTaskButton.disabled = true;
 
         let toDoName = userInput.querySelector('.todo-input').value;
@@ -99,7 +95,7 @@ addTaskButton.addEventListener('click', () => {
             inputAppend.removeChild(userInput);
 
             displayTasks();
-            
+
         }
 
     });
@@ -123,7 +119,7 @@ function optionAction() {
         let completedButton;
         title.addEventListener('click', (event) => {
 
-             options = title.parentElement.querySelector('.options');
+            options = title.parentElement.querySelector('.options');
 
             if (options === openOptions) {
                 if (options.style.display === 'flex') {
@@ -142,9 +138,9 @@ function optionAction() {
             }
             optionsDisable(title, options);
 
-             completedButton = options.querySelector('.completed');
-            
-            completedButton.addEventListener('click',completeOptionHandler)
+            completedButton = options.querySelector('.completed');
+
+            completedButton.addEventListener('click', completeOptionHandler)
 
             let deleteOption = options.querySelector('.delete');
 
@@ -154,11 +150,10 @@ function optionAction() {
 
         });
 
-        function completeOptionHandler()
-        {
+        function completeOptionHandler() {
             completeOption(options)
-            completedButton.removeEventListener('click',completeOption)
-            
+            completedButton.removeEventListener('click', completeOption)
+
         }
 
     });
@@ -168,17 +163,17 @@ function optionAction() {
 function completeOption(options) {
     let tasks = JSON.parse(localStorage.getItem('tasks'))
 
-    let optionsParent = options.parentElement; 
+    let optionsParent = options.parentElement;
 
     let titleToComplete = optionsParent.querySelector('.title').textContent
 
     let taskTOComplete = tasks.find(task => task.name === titleToComplete)
 
-    taskTOComplete.completed=true;
+    taskTOComplete.completed = true;
 
-    let titleToMark=optionsParent.querySelector('.title')
+    let titleToMark = optionsParent.querySelector('.title')
 
-    titleToMark.style.textDecoration='line-through'
+    titleToMark.style.textDecoration = 'line-through'
 
     localStorage.setItem('tasks', JSON.stringify(tasks))
 
