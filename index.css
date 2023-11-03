@@ -627,3 +627,338 @@ button:hover {
     }
 
 }
+
+@media (min-width:768px) and (max-width:1024px) {
+
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+    }
+    
+    #container {
+        background-color:#161616;
+        display: flex;
+        height: 100vh;
+        width: 100vw;
+        align-items: center;
+        box-sizing: border-box;
+        justify-content: center;
+        position: relative;
+       flex-flow: row wrap;
+  
+    }
+    
+    .box2 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+        position: relative;
+        text-wrap: wrap;
+        box-sizing: border-box;
+    
+    }
+    
+    .todo-box {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1% 1% 0px 1.3%;
+        width: 96%;
+        height: 85%;
+        position: absolute;
+        top: 8%;     
+        overflow-y: scroll; 
+        overflow-x: hidden;
+        
+    
+    }
+    
+    .todo-box::-webkit-scrollbar {
+        width: 0px;
+        height: 10px;
+      }
+      
+    
+      .todo-box::-webkit-scrollbar-thumb {
+        background: #080303;
+        border-radius: 6px;
+      }
+
+
+      .date {
+        border-radius: 10px;
+        background-color: #161616;
+        color: white;
+        height: 6%;
+        width: 98%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px; 
+        position: absolute;
+        z-index: 5;
+        overflow: hidden;
+        font-size: 2rem;
+        
+    }
+
+    .black-box{
+        border: 2px solid black;
+        background-color: #161616 ;
+        border-radius: 10px;
+        height: 91%;
+        width: 97%;
+        position: absolute;
+        left:1.5%;
+        top: 8%;
+    }
+    
+    .title-note-list {
+        display: flex;
+        gap: 0.5rem;
+        z-index: 5;
+        height:10%;
+        align-items: center;
+        width:100%;
+        padding-left: 2%;
+        margin-top: 1%;
+        flex-flow: row wrap;
+       position: relative;
+    }
+    
+    .button-box{
+        width: 97%;
+        height: 3rem;
+        display: flex;
+        position: absolute;
+        bottom: 1%;
+        left: 1.5%;  
+    
+    }
+    
+    .button-box #add-task-button{
+        background-color: #161616;
+        border: 2px solid black;
+        width: 100%;
+        color: white;
+        text-align: center;
+        z-index: 1;
+        border-radius: 0px 0px 10px 10px;
+        overflow: hidden;
+        font-size: 2rem; 
+    }
+    
+    
+    .title {
+        
+        background-color: #161616;
+        border: 1.7px solid black;
+        color: white;
+        width: 65%;
+        height: 98%;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        margin-left: 0.3%;
+        padding-left: 2%;
+        font-size: 2rem;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        z-index: 55;
+        box-shadow: 0px 2px 2px  black;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+    
+    
+    }
+    
+    .title::-webkit-scrollbar {
+        width: 0px;
+        height: 0.05px;
+      }
+      
+    
+      .title:-webkit-scrollbar-thumb {
+        background: #080303;
+        border-radius: 6px;
+      }
+    .title:hover {
+        transform: translateY(-0.7px);
+        cursor: pointer;
+        background-color: #151414;
+     
+    }
+    
+    .note {
+        border: 1.7px solid black;
+        background-color: #161616;
+        border-radius: 10px;
+        color: white;
+        width: 30%;
+        min-height: 1.5rem;
+        padding: 4px;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        text-align: justify;
+        left: 60%;
+        transform: translateX(0);
+        transition: transform 0.2s linear, visibility 0s linear, opacity 0.5s linear;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 10; 
+        overflow: hidden;
+        position: absolute;
+        top: 10%;
+    }
+    
+    .title:hover ~ .note{
+        visibility: visible;
+        background-color: #161616;
+        opacity: 1;
+        transform: translateX(32%);
+        box-shadow: 0px 3px 2px  black;
+    
+    }
+    
+    .form {
+        border: 1px solid black;
+        background-color: #161616;
+        height: 38%;
+        width: 70%;
+        right: 10%;
+        color: white;
+        position: absolute;
+        bottom: 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        border-radius: 7px;
+        z-index: 55;
+        padding: 0.5%;
+        padding-top: 1.2%;
+        box-shadow: 0px 0px 5px 2px  black;
+        flex-flow: row wrap;
+    }
+    
+    .input-flex {
+        display: flex;
+        gap: 0.5%;
+        padding: 2px;
+        width: 97%;
+        height: 23%;
+    }
+    
+    .input-buttons{
+        display: flex;
+        justify-content: center;
+        gap: 3%;
+        width: 97%;
+    }
+    
+    .input-buttons #save-button{
+        background-color: #161616;
+        width: 16%;
+        color: white;
+        overflow: hidden;
+        font-size: 1.7rem;
+    }
+    
+    .input-buttons #cancel-button{
+        background-color: #161616;
+        width: 17%;
+        color: white;
+        overflow: hidden;
+        font-size: 1.7rem;
+    }
+    
+    .todo-text{
+        font-size: 2rem;
+        width: 16%;
+        overflow: hidden;
+    
+    }
+    
+    .todo-note-text{
+        height: 30%;
+        width:16% ;
+        overflow: hidden;
+        font-size: 2rem;
+        color: white;
+    }
+    
+    .input-outer{
+        flex-wrap: wrap;
+       width: 100%;
+       height: 90%;
+       
+    }
+    .todo-input {
+       width: 100%;
+        height: 100%;
+    }
+    
+    .todo-output-flex{
+        display: flex;
+        gap: 0.1%;
+        width:97%;
+        padding: 2px;
+        height: 40%;
+        color: white;
+    }
+    .textarea-outer{
+        width: 100%;
+        margin-left: 1%;
+    }
+    
+    .textarea-fixed {
+        width: 100%;
+        resize: none;
+        height: 100%;
+    }
+    
+    button:hover {
+        cursor: pointer;
+    }
+
+    input{
+        background-color: #161616;
+        color: white;
+        font-size: 2rem;
+    }
+    
+    textarea{
+        background-color: #161616;
+        color: white;
+        font-size: 2rem;
+    }
+
+    .options{
+        width: 28%;
+        height: 4rem;
+        display: flex;
+        gap: 0.2rem;
+        justify-content: flex-end;
+        align-items: center;
+        display: none;
+        position: absolute;
+        left: 37%;
+        z-index: 50;  
+    }
+    
+    .option-button-display{
+        background-color: #161616;
+        height: 70%;
+        width: 20%;
+        border-radius: 7px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+    }
+    
+}
