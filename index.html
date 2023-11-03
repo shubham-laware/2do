@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo</title>
-    <link rel="stylesheet" href="index.css">
+    <title>toDo</title>
+    <link rel="stylesheet" href="todo.css">
 
 </head>
 
@@ -38,37 +38,35 @@
 
     </div>
 
-    </div>
-
     <template id="user-inputT">
 
         <form action="" class="form box4">
 
-            <div class="input-flex">
+            <div class="input-flex todo-input-flex">
 
-                <div>
+                <div class="todo-text">
                     ToDo:
                 </div>
 
-                <div>
+                <div class="input-outer">
                     <input type="text" class="todo-input">
                 </div>
 
             </div>
 
-            <div class="input-flex">
+            <div class="todo-output-flex">
 
-                <div>
+                <div class="todo-note-text">
                     Note:
                 </div>
 
-                <div>
-                    <textarea cols="39" rows="4" class="textarea-fixed todo-note"></textarea>
+                <div class="textarea-outer">
+                    <textarea cols="40" rows="4" class="textarea-fixed todo-note"></textarea>
                 </div>
 
             </div>
 
-            <div class="input-flex input-buttons">
+            <div class="input-buttons">
 
                 <button type="button" id="save-button">Save</button>
 
@@ -148,7 +146,7 @@
     </template>
 
 
-    <script src="index.js"></script>
+    <script src="todo.js"></script>
 
 
 </body>
