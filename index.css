@@ -706,7 +706,7 @@ button:hover {
     }
 
     .black-box{
-        border: 3px solid black;
+        border: 4px solid black;
         background-color: #161616 ;
         border-radius: 10px;
         height: 91%;
@@ -741,7 +741,7 @@ button:hover {
     
     .button-box #add-task-button{
         background-color: #161616;
-        border: 3px solid black;
+        border: 4px solid black;
         width: 100%;
         color: white;
         text-align: center;
