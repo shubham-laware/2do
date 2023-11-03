@@ -830,7 +830,7 @@ button:hover {
         border: 1px solid black;
         background-color: #161616;
         height: 30%;
-        width: 72%;
+        width: 75%;
         right: 13.5%;
         color: white;
         position: absolute;
@@ -896,7 +896,7 @@ button:hover {
     .input-outer{
         flex-wrap: wrap;
        width: 100%;
-       height: 80%;
+       height: 75%;
        
     }
     .todo-input {
