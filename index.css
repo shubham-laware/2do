@@ -706,7 +706,7 @@ button:hover {
     }
 
     .black-box{
-        border: 2px solid black;
+        border: 3px solid black;
         background-color: #161616 ;
         border-radius: 10px;
         height: 91%;
@@ -720,7 +720,7 @@ button:hover {
         display: flex;
         gap: 0.5rem;
         z-index: 5;
-        height:10%;
+        height:9%;
         align-items: center;
         width:100%;
         padding-left: 2%;
@@ -741,7 +741,7 @@ button:hover {
     
     .button-box #add-task-button{
         background-color: #161616;
-        border: 2px solid black;
+        border: 3px solid black;
         width: 100%;
         color: white;
         text-align: center;
@@ -758,7 +758,7 @@ button:hover {
         border: 1.7px solid black;
         color: white;
         width: 65%;
-        height: 90%;
+        height: 88%;
         border-radius: 10px;
         display: flex;
         align-items: center;
