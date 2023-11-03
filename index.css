@@ -731,7 +731,7 @@ button:hover {
     
     .button-box{
         width: 97%;
-        height: 3rem;
+        height: 3.5rem;
         display: flex;
         position: absolute;
         bottom: 1%;
@@ -748,7 +748,7 @@ button:hover {
         z-index: 1;
         border-radius: 0px 0px 10px 10px;
         overflow: hidden;
-        font-size: 2rem; 
+        font-size: 2.5rem; 
     }
     
     
@@ -758,13 +758,13 @@ button:hover {
         border: 1.7px solid black;
         color: white;
         width: 65%;
-        height: 98%;
+        height: 90%;
         border-radius: 10px;
         display: flex;
         align-items: center;
         margin-left: 0.3%;
         padding-left: 2%;
-        font-size: 2rem;
+        font-size: 2.3rem;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         z-index: 55;
         box-shadow: 0px 2px 2px  black;
@@ -828,9 +828,9 @@ button:hover {
     .form {
         border: 1px solid black;
         background-color: #161616;
-        height: 38%;
+        height: 30%;
         width: 70%;
-        right: 10%;
+        right: 13.5%;
         color: white;
         position: absolute;
         bottom: 1%;
@@ -895,7 +895,7 @@ button:hover {
     .input-outer{
         flex-wrap: wrap;
        width: 100%;
-       height: 90%;
+       height: 80%;
        
     }
     .todo-input {
@@ -942,7 +942,7 @@ button:hover {
         width: 28%;
         height: 4rem;
         display: flex;
-        gap: 0.2rem;
+        gap: 0.5rem;
         justify-content: flex-end;
         align-items: center;
         display: none;
