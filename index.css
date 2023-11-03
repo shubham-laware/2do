@@ -559,7 +559,7 @@ button:hover {
         height: 30%;
         width:16% ;
         overflow: hidden;
-        font-size: 0.8rem;
+        font-size: 0.8rem; color: white;
     }
     
     .input-outer{
@@ -578,6 +578,7 @@ button:hover {
         width:97%;
         padding: 2px;
         height: 40%;
+        color: white;
     }
     .textarea-outer{
         width: 100%;
