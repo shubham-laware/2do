@@ -321,7 +321,7 @@ button:hover {
     #container {
         background-color:#161616;
         display: flex;
-        height: 100vh;
+        height: 80vh;
         width: 100vw;
         align-items: center;
         box-sizing: border-box;
@@ -559,7 +559,7 @@ button:hover {
         height: 30%;
         width:16% ;
         overflow: hidden;
-        font-size: 0.8rem; color: white;
+        font-size: 0.8rem;
     }
     
     .input-outer{
@@ -578,7 +578,6 @@ button:hover {
         width:97%;
         padding: 2px;
         height: 40%;
-        color: white;
     }
     .textarea-outer{
         width: 100%;
