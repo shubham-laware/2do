@@ -758,7 +758,7 @@ button:hover {
         border: 1.7px solid black;
         color: white;
         width: 65%;
-        height: 88%;
+        height: 86%;
         border-radius: 10px;
         display: flex;
         align-items: center;
@@ -800,6 +800,7 @@ button:hover {
         width: 30%;
         min-height: 1.5rem;
         padding: 4px;
+        padding-left: 0.5%;
         font-size: 2rem;
         display: flex;
         justify-content: center;
