@@ -954,8 +954,8 @@ button:hover {
     
     .option-button-display{
         background-color: #161616;
-        height: 70%;
-        width: 20%;
+        height: 90%;
+        width: 25%;
         border-radius: 7px;
         display: flex;
         justify-content: center;
